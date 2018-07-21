@@ -1,12 +1,14 @@
 package com.zgm;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@MapperScan(basePackages = "com.zgm.repository")
 //@MapperScan(basePackages = "com.sui.travel.repository")
 public class Application {
-    public static void main(String[] args)throws Exception{
+    public static void main(String[] args){
         SpringApplication.run(Application.class,args);
     }
 }
